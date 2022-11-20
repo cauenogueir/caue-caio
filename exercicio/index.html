@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -12,20 +12,48 @@
 <body class="box-img-body">
     <section class="box-login">
         
-        <h1 class="cadas">cadastro</h1>
+        <h1 class="cadas">login</h1>
 
             <div class="box-quest">   
 
                 <span  style="color: white; font-weight: bold;" >E-mail </span>
-                <input style="height: 19px;" type="text" placeholder="email"></input>
+                <input style="height: 19px;" type="text" placeholder="email" id="ipt_email"></input>
+                <div id="div1" class="div1"></div>
         
-                <span  style="color: white; font-weight: bold;">senha </span>
-                <input style="height: 19px;" type="password" placeholder="********"></input>
+                <span  style="color: white; font-weight: bold;">Senha </span>
+                <input style="height: 19px;" type="password" placeholder="********" id="ipt_senha"></input>
         
+                <span  class="1" ><a style="color: white;" href="../cadastro.html">Cadastrar-se</a></span>
+
             </div> 
     
-        <button class="line-butt"> entrar</button>
+        <button onclick="entrar()" class="line-butt"> Entrar</button>
+      
 
     </section>
 </body>
 </html>
+<script>
+    function entrar() {
+        var email =  ipt_email.value;
+        var senha = ipt_senha.value;
+
+        if ((email == "") ||
+    (email.length <5) ||
+    (email.indexOf("@")==-1) ||
+    (email.indexOf(".") ==-1))
+    {
+           alert(`email inválido!`)
+
+        } else if ((senha == "") ||
+    (senha.length <8) ||
+    (senha.length >12))
+    { 
+        
+        alert(`Senha Inválida!`)
+    }
+    else{
+        alert(`login feito!`)
+    }
+}
+</script>

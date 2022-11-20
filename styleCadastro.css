@@ -1,0 +1,51 @@
+.box-img-body{
+    background-image: url("./exercicio/assets/fundoB\ -\ Copia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 98vh ;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: black;
+    
+}
+
+
+.box-cadastro{
+
+
+display: flex;
+ color:white;
+flex-direction: column;
+align-items: center;
+margin: 160px;
+height: 400px;
+width: 445px;
+justify-content:flex-start; 
+background-color: transparent;   
+}
+
+.box-test{
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+height: 164px;
+margin: 1px;
+justify-content: space-between;
+}
+
+.line-butt{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 28px;
+width: 95px;
+margin: 22px;
+justify-content: space-evenly;
+border-radius: 12px; 
+border-color: #48f403;
+}
