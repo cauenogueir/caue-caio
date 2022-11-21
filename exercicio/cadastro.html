@@ -17,18 +17,65 @@
             <div class="box-test">   
 
                 <span  style="color: white; font-weight: bold;" >E-mail </span>
-                <input style="height: 19px;" type="text" placeholder="Digite seu email"></input>
+                <input style="height: 19px;" type="text" placeholder="Digite seu email" id="ipt_email"></input>
 
                 <span  style="color: white; font-weight: bold;" >Nome </span>
-                <input style="height: 19px;" type="text" placeholder="Digite seu Nome"></input>
+                <input style="height: 19px;" type="text" placeholder="Digite seu Nome"  id="ipt_nome"></input>
         
                 <span  style="color: white; font-weight: bold;">Senha </span>
-                <input style="height: 19px;" type="password" placeholder="Digite sua senha"></input>
+                <input style="height: 19px;" type="password" placeholder="Digite sua senha"  id="ipt_senha"></input>
         
             </div> 
     
-        <button class="line-butt"> Cadastrar-se</button>
+    <form action="./index.html">
+        <button  onclick="cadastrar()" class="line-butt" > Cadastrar-se</button>
+    </form>
 
     </section>
 </body>
 </html>
+
+<script>
+    function cadastrar() {
+        var email =  ipt_email.value;
+        var nome = ipt_nome.value;
+        var senha = ipt_senha.value;
+        
+        //java / email
+
+     if ((email == "") ||
+
+        (email.length <5) ||
+        (email.indexOf("@")==-1) ||
+        (email.indexOf(".") ==-1))
+    {
+
+    alert(`Email inválido!`)
+
+        //java / nome
+
+    } else if((nome == "")||
+
+        (nome.length <3) ||
+        (nome.length >18))
+    { 
+        
+
+     alert(`Nome Invalido!`)
+
+        //java / senha
+
+    }else if ((senha == "") ||
+
+        (senha.length <5) ||
+        (senha.length >16))
+    { 
+        
+    alert(`Senha Inválida!`)
+    }
+
+    
+
+  
+}
+</script>
